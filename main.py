@@ -29,7 +29,7 @@ def main(page: ft.Page):
             ),
             expand=True,
             padding=20,
-            alignment=ft.Alignment.center
+            alignment=ft.Alignment.CENTER
         )
     )
     page.update()
