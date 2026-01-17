@@ -8,6 +8,7 @@ def main(page: ft.Page):
     page.window.resizable = False
     page.window.maximizable = False
     page.window.always_on_top = True
+    page.window.icon = "icon.png"
     page.padding = 0
     page.theme_mode = ft.ThemeMode.LIGHT
     
@@ -21,27 +22,12 @@ def main(page: ft.Page):
         ft.Container(
             content=ft.Column(
                 [
-                    # App Logo and Name
-                    ft.Row(
-                        [
-                            ft.Image(src="icon.png", width=50, height=50, border_radius=10),
-                            ft.Text(
-                                "NewUserApp", 
-                                size=28, 
-                                weight=ft.FontWeight.BOLD,
-                                color=ft.Colors.BLUE_900
-                            ),
-                        ],
-                        alignment=ft.MainAxisAlignment.CENTER,
-                        spacing=15
-                    ),
-                    ft.Divider(height=30, color=ft.Colors.TRANSPARENT),
                     ft.Text(
                         I18n.t("welcome.title"), 
-                        size=32, 
+                        size=36, 
                         weight=ft.FontWeight.BOLD,
                         text_align=ft.TextAlign.CENTER,
-                        color=ft.Colors.BLUE_700
+                        color=ft.Colors.BLUE_900
                     ),
                     ft.Divider(height=20, color=ft.Colors.TRANSPARENT),
                     ft.Text(
