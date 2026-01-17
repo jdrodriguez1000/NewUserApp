@@ -2,11 +2,12 @@ import flet as ft
 from core.i18n import I18n
 
 def main(page: ft.Page):
-    # Window Configuration (Mobile-Only aesthetic)
-    page.window_width = 390
-    page.window_height = 844
-    page.window_resizable = False
-    page.window_always_on_top = True
+    # Window Configuration (Stricter Mobile-Only aesthetic)
+    page.window.width = 390
+    page.window.height = 844
+    page.window.resizable = False
+    page.window.maximizable = False
+    page.window.always_on_top = True
     page.padding = 0
     page.theme_mode = ft.ThemeMode.LIGHT
     
