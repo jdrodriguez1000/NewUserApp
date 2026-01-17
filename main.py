@@ -6,16 +6,16 @@ def main(page: ft.Page):
     # Window Configuration (Stricter Mobile-Only aesthetic)
     page.window.width = 390
     page.window.height = 844
-    page.window.resizable = False
     page.window.maximizable = False
     page.window.always_on_top = True
     
-    # Try multiple ways to set the icon using assets-relative path
-    page.window_icon = "icon.png"
+    # Debug absolute path and multiple assignment
+    icon_abs_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "assets", "icon.png"))
+    page.window_icon = icon_abs_path
     if hasattr(page, "window"):
-        page.window.icon = "icon.png"
+        page.window.icon = icon_abs_path
     
-    print(f"Icon set to: icon.png (via assets_dir)")
+    print(f"DEBUG: Icon path: {icon_abs_path}")
     
     page.padding = 0
     page.theme_mode = ft.ThemeMode.LIGHT
