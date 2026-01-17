@@ -12,7 +12,7 @@ def main(page: ft.Page):
     page.theme_mode = ft.ThemeMode.LIGHT
     
     # Initialize I18n
-    I18n.load_translations("es")
+    I18n.load_translations("en")
 
     page.title = "NewUserApp"
     
@@ -36,13 +36,14 @@ def main(page: ft.Page):
                         color=ft.Colors.BLUE_GREY_700
                     ),
                     ft.Divider(height=40, color=ft.Colors.TRANSPARENT),
-                    ft.ElevatedButton(
+                    ft.Button(
                         content=ft.Text(I18n.t("welcome.get_started"), size=18, weight=ft.FontWeight.W_500),
                         style=ft.ButtonStyle(
                             color=ft.Colors.WHITE,
                             bgcolor=ft.Colors.BLUE_600,
                             padding=ft.Padding.all(20),
                             shape=ft.RoundedRectangleBorder(radius=12),
+                            elevation=4, # Simulate elevation that would have come from ElevatedButton
                         ),
                         width=280,
                     )
