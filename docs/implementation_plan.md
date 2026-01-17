@@ -29,14 +29,17 @@ This plan organizes the development of the NewUserApp project into distinct phas
 - [NEW] `views/pages/welcome_view.py`: UI premium con imagen de fondo y botón "Get Started".
 - [MODIFY] `configs/routes.py`: Establecer `/welcome` como ruta inicial por defecto.
 
-### Phase 4: Event - User Registration
-- [NEW] `views/pages/auth/register_view.py`.
-- [NEW] `controllers/auth_controller.py` (`sign_up` logic).
-- [ACTION] Implement password strength validation and trigger email confirmation.
-
-### Phase 5: Event - Login & Verification Control
+### Phase 4: Event - Login
 - [NEW] `views/pages/auth/login_view.py`.
+- [NEW] `controllers/auth_controller.py` (Shared logic for Sign In/Out).
+- [UI] Set "Get Started" from Welcome to navigate here.
+- [UI] Add "New here? Create an account" link navigating to Phase 5.
+
+### Phase 5: Event - User Registration & Verification
+- [NEW] `views/pages/auth/register_view.py`.
 - [NEW] `views/pages/auth/verify_email_view.py`.
+- [ACTION] Implement password strength validation and trigger email confirmation.
+- [UI] Add "Already have an account? Login" link navigating back to Phase 4.
 - [MODIFY] `core/router.py`: Implement middleware to block unverified users and redirect them to the pending verification screen.
 
 ### Phase 6: Events - Password Security (Recovery & Change)

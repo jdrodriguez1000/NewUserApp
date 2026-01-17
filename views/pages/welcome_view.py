@@ -72,7 +72,7 @@ class WelcomeView:
                                         shape=ft.RoundedRectangleBorder(radius=15),
                                         elevation=10,
                                     ),
-                                    on_click=lambda _: print("Navigate to Register"),
+                                    on_click=lambda _: self.page.data["router"].navigate("/login"),
                                     width=320,
                                 ),
                                 alignment=ft.Alignment.CENTER,
