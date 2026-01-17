@@ -1,5 +1,6 @@
 import flet as ft
 from core.i18n import I18n
+import os
 
 def main(page: ft.Page):
     # Window Configuration (Stricter Mobile-Only aesthetic)
@@ -8,7 +9,11 @@ def main(page: ft.Page):
     page.window.resizable = False
     page.window.maximizable = False
     page.window.always_on_top = True
-    page.window.icon = "icon.png"
+    
+    # Try both modern and old property for maximum compatibility
+    icon_path = os.path.join(os.getcwd(), "assets", "icon.png")
+    page.window.icon = icon_path
+    
     page.padding = 0
     page.theme_mode = ft.ThemeMode.LIGHT
     
