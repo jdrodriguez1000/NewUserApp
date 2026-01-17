@@ -21,7 +21,7 @@ def main(page: ft.Page):
     page.theme_mode = ft.ThemeMode.LIGHT
     
     # Initialize I18n
-    I18n.load_translations("en")
+    I18n.load_translations("es")
     page.title = "NewUserApp"
 
     # Initialize Router
