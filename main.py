@@ -21,12 +21,27 @@ def main(page: ft.Page):
         ft.Container(
             content=ft.Column(
                 [
+                    # App Logo and Name
+                    ft.Row(
+                        [
+                            ft.Image(src="icon.png", width=50, height=50, border_radius=10),
+                            ft.Text(
+                                "NewUserApp", 
+                                size=28, 
+                                weight=ft.FontWeight.BOLD,
+                                color=ft.Colors.BLUE_900
+                            ),
+                        ],
+                        alignment=ft.MainAxisAlignment.CENTER,
+                        spacing=15
+                    ),
+                    ft.Divider(height=30, color=ft.Colors.TRANSPARENT),
                     ft.Text(
                         I18n.t("welcome.title"), 
-                        size=36, 
+                        size=32, 
                         weight=ft.FontWeight.BOLD,
                         text_align=ft.TextAlign.CENTER,
-                        color=ft.Colors.BLUE_900
+                        color=ft.Colors.BLUE_700
                     ),
                     ft.Divider(height=20, color=ft.Colors.TRANSPARENT),
                     ft.Text(
@@ -60,4 +75,4 @@ def main(page: ft.Page):
     page.update()
 
 if __name__ == "__main__":
-    ft.run(main)
+    ft.run(main, assets_dir="assets")
