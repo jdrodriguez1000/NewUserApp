@@ -22,17 +22,17 @@ def main(page: ft.Page):
                 [
                     ft.Text(I18n.t("welcome.title"), size=32, weight="bold"),
                     ft.Text(I18n.t("welcome.description"), text_align=ft.TextAlign.CENTER),
-                    ft.ElevatedButton(I18n.t("welcome.get_started"))
+                    ft.Button(I18n.t("welcome.get_started"))
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
                 horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             ),
             expand=True,
             padding=20,
-            alignment=ft.alignment.center
+            alignment=ft.Alignment.center
         )
     )
     page.update()
 
 if __name__ == "__main__":
-    ft.app(target=main)
+    ft.run(main)
