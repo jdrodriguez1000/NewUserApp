@@ -18,7 +18,7 @@ class WelcomeView:
                 # Overlay Gradient/Darken
                 ft.Container(
                     expand=True,
-                    bgcolor=ft.Colors.BLACK45,
+                    bgcolor=ft.Colors.BLACK_45,
                 ),
                 # Content
                 ft.Container(
@@ -50,7 +50,7 @@ class WelcomeView:
                             ft.Text(
                                 I18n.t("welcome.description"),
                                 size=16,
-                                color=ft.Colors.WHITE70,
+                                color=ft.Colors.WHITE_70,
                                 text_align=ft.TextAlign.CENTER,
                             ),
                             ft.Container(expand=True),

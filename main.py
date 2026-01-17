@@ -22,6 +22,7 @@ def main(page: ft.Page):
     
     # Initialize I18n
     I18n.load_translations("en")
+    page.title = "NewUserApp"
 
     # Initialize Router
     from core.router import Router
