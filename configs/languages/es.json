@@ -1,0 +1,33 @@
+{
+    "welcome": {
+        "title": "Alimenta tu Cuerpo",
+        "description": "Mide cada comida. Reserva citas, obtén recordatorios y consulta doctores certificados en cualquier momento y lugar.",
+        "get_started": "Empezar"
+    },
+    "auth": {
+        "login": "Iniciar Sesión",
+        "register": "Registrarse",
+        "email": "Correo Electrónico",
+        "password": "Contraseña",
+        "full_name": "Nombre Completo",
+        "forgot_password": "¿Olvidaste tu contraseña?",
+        "already_have_account": "¿Ya tienes una cuenta?",
+        "no_account": "¿No tienes una cuenta?",
+        "verify_email": "Verificar Correo",
+        "verification_pending": "Por favor, verifica tu correo electrónico para continuar."
+    },
+    "profile": {
+        "complete_profile": "Completa tu Perfil",
+        "gender": "Género",
+        "birth_date": "Fecha de Nacimiento",
+        "civil_status": "Estado Civil",
+        "favorite_color": "Color Favorito",
+        "favorite_sport": "Deporte Favorito",
+        "save": "Guardar"
+    },
+    "common": {
+        "error": "Error",
+        "success": "Éxito",
+        "loading": "Cargando..."
+    }
+}
