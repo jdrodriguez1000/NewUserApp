@@ -21,16 +21,39 @@ def main(page: ft.Page):
         ft.Container(
             content=ft.Column(
                 [
-                    ft.Text(I18n.t("welcome.title"), size=32, weight="bold"),
-                    ft.Text(I18n.t("welcome.description"), text_align=ft.TextAlign.CENTER),
-                    ft.Button(I18n.t("welcome.get_started"))
+                    ft.Text(
+                        I18n.t("welcome.title"), 
+                        size=36, 
+                        weight=ft.FontWeight.BOLD,
+                        text_align=ft.TextAlign.CENTER,
+                        color=ft.Colors.BLUE_900
+                    ),
+                    ft.Divider(height=20, color=ft.Colors.TRANSPARENT),
+                    ft.Text(
+                        I18n.t("welcome.description"), 
+                        size=16,
+                        text_align=ft.TextAlign.CENTER,
+                        color=ft.Colors.BLUE_GREY_700
+                    ),
+                    ft.Divider(height=40, color=ft.Colors.TRANSPARENT),
+                    ft.ElevatedButton(
+                        content=ft.Text(I18n.t("welcome.get_started"), size=18, weight=ft.FontWeight.W_500),
+                        style=ft.ButtonStyle(
+                            color=ft.Colors.WHITE,
+                            bgcolor=ft.Colors.BLUE_600,
+                            padding=ft.Padding.all(20),
+                            shape=ft.RoundedRectangleBorder(radius=12),
+                        ),
+                        width=280,
+                    )
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
                 horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             ),
             expand=True,
-            padding=20,
-            alignment=ft.Alignment.CENTER
+            padding=40,
+            alignment=ft.Alignment.CENTER,
+            bgcolor=ft.Colors.GREY_50
         )
     )
     page.update()
