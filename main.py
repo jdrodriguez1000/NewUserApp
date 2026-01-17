@@ -10,7 +10,7 @@ def main(page: ft.Page):
     page.window.always_on_top = True
     
     # Debug absolute path and multiple assignment
-    icon_abs_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "assets", "icon_small.png"))
+    icon_abs_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "assets", "icon.ico"))
     page.window_icon = icon_abs_path
     if hasattr(page, "window"):
         page.window.icon = icon_abs_path
