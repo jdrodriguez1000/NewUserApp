@@ -10,9 +10,12 @@ def main(page: ft.Page):
     page.window.maximizable = False
     page.window.always_on_top = True
     
-    # Try both modern and old property for maximum compatibility
-    icon_path = os.path.join(os.getcwd(), "assets", "icon.png")
-    page.window.icon = icon_path
+    # Try multiple ways to set the icon using assets-relative path
+    page.window_icon = "icon.png"
+    if hasattr(page, "window"):
+        page.window.icon = "icon.png"
+    
+    print(f"Icon set to: icon.png (via assets_dir)")
     
     page.padding = 0
     page.theme_mode = ft.ThemeMode.LIGHT
