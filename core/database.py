@@ -17,4 +17,5 @@ class Database:
             cls._instance = create_client(url, key)
         return cls._instance
 
-# Usage: db = Database.get_client()
+# Global Database Client Instance
+db = Database.get_client()

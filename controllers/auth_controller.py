@@ -2,7 +2,7 @@ from core.database import db
 
 class AuthController:
     def __init__(self):
-        self.supabase = db.client
+        self.supabase = db
 
     def login(self, email, password):
         """

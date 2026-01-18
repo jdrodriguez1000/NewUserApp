@@ -66,11 +66,11 @@ class LoginView:
                             I18n.t("auth.forgot_password"),
                             on_click=lambda _: print("Navigate to Forgot Password")
                         ),
-                        alignment=ft.alignment.center_right
+                        alignment=ft.Alignment.CENTER_RIGHT
                     ),
                     ft.Container(height=30),
                     ft.Button(
-                        text=I18n.t("auth.login"),
+                        content=ft.Text(I18n.t("auth.login"), weight=ft.FontWeight.BOLD),
                         style=ft.ButtonStyle(
                             color=ft.Colors.WHITE,
                             bgcolor=ft.Colors.BLUE_600,
@@ -81,7 +81,7 @@ class LoginView:
                         width=320,
                         on_click=self.handle_login
                     ),
-                    ft.Spacer(),
+                    ft.Container(expand=True),
                     ft.Row(
                         [
                             ft.Text(I18n.t("auth.no_account")),

@@ -1,6 +1,11 @@
 import flet as ft
 from core.i18n import I18n
 import os
+import warnings
+
+# Suppress library deprecation warnings for a cleaner console
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+warnings.filterwarnings("ignore", message=".*PydanticDeprecatedSince212.*")
 
 def main(page: ft.Page):
     # Window Configuration (Stricter Mobile-Only aesthetic)
