@@ -14,7 +14,12 @@
         "already_have_account": "¿Ya tienes una cuenta?",
         "no_account": "¿No tienes una cuenta?",
         "verify_email": "Verificar Correo",
-        "verification_pending": "Por favor, verifica tu correo electrónico para continuar."
+        "verification_pending": "Por favor, verifica tu correo electrónico para continuar.",
+        "error_required_fields": "Todos los campos son obligatorios, regístralos",
+        "error_password_match": "Las contraseñas no coinciden, deben ser iguales",
+        "error_password_security": "La contraseña debe tener al menos 8 caracteres",
+        "error_invalid_email": "Ingresa un correo electrónico válido",
+        "error_email_exists": "Este correo ya está registrado, intenta iniciar sesión"
     },
     "profile": {
         "complete_profile": "Completa tu Perfil",

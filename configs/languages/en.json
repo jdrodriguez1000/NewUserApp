@@ -14,7 +14,12 @@
         "already_have_account": "Already have an account?",
         "no_account": "Don't have an account?",
         "verify_email": "Verify Email",
-        "verification_pending": "Please verify your email to continue."
+        "verification_pending": "Please verify your email to continue.",
+        "error_required_fields": "All fields are required, please fill them in",
+        "error_password_match": "Passwords do not match, they must be identical",
+        "error_password_security": "Password must be at least 8 characters long",
+        "error_invalid_email": "Enter a valid email address",
+        "error_email_exists": "This email is already registered, try logging in"
     },
     "profile": {
         "complete_profile": "Complete your Profile",
