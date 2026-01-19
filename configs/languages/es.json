@@ -19,7 +19,15 @@
         "error_password_match": "Las contraseñas no coinciden, deben ser iguales",
         "error_password_security": "La contraseña debe tener al menos 8 caracteres",
         "error_invalid_email": "Ingresa un correo electrónico válido",
-        "error_email_exists": "Este correo ya está registrado, intenta iniciar sesión"
+        "error_email_exists": "Este correo ya está registrado, intenta iniciar sesión",
+        "reset_password": "Restablecer Contraseña",
+        "send_email": "Enviar Correo",
+        "back_to_login": "Volver al Inicio",
+        "instructions_forgot": "Ingresa tu correo electrónico para recibir las instrucciones de restablecimiento.",
+        "new_password": "Nueva Contraseña",
+        "confirm_new_password": "Confirmar Nueva Contraseña",
+        "password_reset_success": "Se ha enviado un correo con instrucciones para restablecer tu contraseña.",
+        "password_changed_success": "Tu contraseña ha sido cambiada con éxito."
     },
     "profile": {
         "complete_profile": "Completa tu Perfil",

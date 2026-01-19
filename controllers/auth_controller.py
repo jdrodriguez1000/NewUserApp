@@ -55,3 +55,54 @@ class AuthController:
         if session and session.user:
             return session.user.email_confirmed_at is not None
         return False
+
+    def exchange_code(self, code):
+        """
+        Exchanges an auth code for a session (PKCE flow).
+        """
+        try:
+            res = self.supabase.auth.exchange_code_for_session({"auth_code": code})
+            return {"success": True, "session": res.session}
+        except Exception as e:
+            return {"success": False, "error": str(e)}
+
+    def send_reset_password_email(self, email):
+        """
+        Sends a password reset email to the user.
+        """
+        try:
+            # Enviamos al BRIDGE que convierte el # en ?
+            self.supabase.auth.reset_password_for_email(
+                email, 
+                options={"redirect_to": "http://localhost:3000/recovery.html"}
+            )
+            return {"success": True}
+        except Exception as e:
+            return {"success": False, "error": str(e)}
+
+    def update_password(self, new_password):
+        """
+        Updates the password for the currently logged-in user.
+        """
+        try:
+            # Intentamos obtener el usuario actual para debug
+            user = self.supabase.auth.get_user()
+            if user:
+                print(f"DEBUG: update_password - Usuario detectado: {user.user.email}")
+            
+            self.supabase.auth.update_user({"password": new_password})
+            return {"success": True}
+        except Exception as e:
+            print(f"DEBUG: Error real de Supabase en update_password: {e}")
+            return {"success": False, "error": str(e)}
+
+    def set_session(self, access_token, refresh_token):
+        """
+        Sets the active session using tokens (used after password reset email).
+        """
+        try:
+            self.supabase.auth.set_session(access_token, refresh_token)
+            return {"success": True}
+        except Exception as e:
+            print(f"DEBUG: Error setting session: {e}")
+            return {"success": False, "error": str(e)}

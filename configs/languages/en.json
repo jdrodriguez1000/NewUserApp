@@ -19,7 +19,15 @@
         "error_password_match": "Passwords do not match, they must be identical",
         "error_password_security": "Password must be at least 8 characters long",
         "error_invalid_email": "Enter a valid email address",
-        "error_email_exists": "This email is already registered, try logging in"
+        "error_email_exists": "This email is already registered, try logging in",
+        "reset_password": "Reset Password",
+        "send_email": "Send Email",
+        "back_to_login": "Back to Login",
+        "instructions_forgot": "Enter your email address to receive reset instructions.",
+        "new_password": "New Password",
+        "confirm_new_password": "Confirm New Password",
+        "password_reset_success": "An email with instructions to reset your password has been sent.",
+        "password_changed_success": "Your password has been successfully changed."
     },
     "profile": {
         "complete_profile": "Complete your Profile",

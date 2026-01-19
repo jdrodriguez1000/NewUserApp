@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sincronizando Auth...</title>
+</head>
+
+<body>
+    <script>
+        // 1. Capturamos el hash (#access_token=...)
+        const hash = window.location.hash;
+        console.log("Hash detectado:", hash);
+
+        if (hash && hash.includes("access_token=")) {
+            // 2. Convertimos el hash en una Query String (?access_token=...)
+            const queryString = hash.replace("#", "?");
+
+            // 3. Redirigimos a la app usando la Query String que Flet SÍ puede leer
+            // Usamos la ruta directa sin el fragmento de Flet para que el navegador lo vea como una nueva carga
+            window.location.href = "/set-new-password" + queryString;
+        } else {
+            // Si no hay hash, buscamos en la query o volvemos al inicio
+            window.location.href = "/";
+        }
+    </script>
+    <p style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+        Conectando con Supabase... por favor espere.
+    </p>
+</body>
+
+</html>
